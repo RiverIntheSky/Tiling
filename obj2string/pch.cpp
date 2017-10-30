@@ -49,20 +49,20 @@ std::string cutComments(const std::string & aLine, const char * aToken)
 std::string getDirName(const std::string & _name)
 {
 	std::string objDir;
-//#if _MSC_VER >= 1400
+#if _MSC_VER >= 1400
 	char fileDir[4096];
 	_splitpath_s(_name.c_str(), NULL, 0, fileDir, sizeof(fileDir), NULL, 0, NULL, 0);
 	objDir = fileDir;
-//#endif
+#endif
 
-//#ifndef _WIN32
+#ifndef _WIN32
 	char *fnCopy = strdup(_name.c_str());
 	const char* dirName = dirname(fnCopy);
 	objDir = dirName;
 	objDir.append("/");
 	free(fnCopy);
 	//std::cerr << "Dirname: " << objDir << "\n";
-//#endif // _WIN32
+#endif // _WIN32
 
 	return objDir;
 }

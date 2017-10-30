@@ -1,0 +1,4 @@
+file(GLOB SOURCES "*.py")
+add_library(NeuralNets ${SOURCES})
+target_include_directories(NeuralNets PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+set_target_properties(NeuralNets PROPERTIES LINKER_LANGUAGE PYTHON)

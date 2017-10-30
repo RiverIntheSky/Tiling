@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11    CMakeFiles/test.dir/./test_generated_main.cu.o  -o test -rdynamic -lcudart -lcudart -lNeuralNets 

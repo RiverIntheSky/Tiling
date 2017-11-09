@@ -10,9 +10,7 @@ include_directories(
     ${PYTHON_INCLUDE_DIRS}
     obj2string)
 
-add_subdirectory (
-    obj2string
-    tests
-)
+add_subdirectory (obj2string)
+add_subdirectory (tests)
 
 
